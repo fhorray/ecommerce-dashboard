@@ -1,5 +1,6 @@
-import prismadb from "@/lib/prismadb";
+import React from "react";
 import { auth } from "@clerk/nextjs";
+import prismadb from "@/lib/prismadb";
 import { redirect } from "next/navigation";
 
 export default async function SetupLayout({
@@ -20,7 +21,7 @@ export default async function SetupLayout({
   });
 
   if (store) {
-    redirect(`/${store.id}}`);
+    redirect(`/${store.id}`);
   }
 
   return <>{children}</>;

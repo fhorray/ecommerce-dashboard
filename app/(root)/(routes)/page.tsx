@@ -3,9 +3,7 @@
 import { useStoreModal } from "@/hooks/use-store-modal";
 import { useEffect } from "react";
 
-import { UserButton } from "@clerk/nextjs";
-
-export default function Home() {
+const SetupPage = () => {
   const onOpen = useStoreModal((state) => state.onOpen);
   const isOpen = useStoreModal((state) => state.isOpen);
 
@@ -15,10 +13,7 @@ export default function Home() {
     }
   }, [isOpen, onOpen]);
 
-  return (
-    <div className="p-4">
-      <h1>Root Page</h1>
-      <UserButton />
-    </div>
-  );
-}
+  return null;
+};
+
+export default SetupPage;
